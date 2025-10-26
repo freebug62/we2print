@@ -1,0 +1,55 @@
+#w2p-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: var(--w2p-loading-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#w2p-loading svg {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-bottom: 25px;
+}
+
+#w2p-loading>svg>circle {
+    stroke: var(--w2p-loading-stroke) !important;
+}
+
+#w2p-loading .w2p-loading-text {
+    font-size: var(--w2p-loading-font-size);
+    font-family: var(--w2p-loading-font-family);
+    font-weight: bold;
+    color: var(--w2p-loading-text-color);
+    user-select: none;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 120px;
+}
+
+.w2p-loading-hidden {
+    animation: w2p-loading-fadeOut 0.5s forwards;
+}
+
+@keyframes w2p-loading-fadeOut {
+    0% {
+        opacity: 1;
+        display: flex;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}

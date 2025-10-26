@@ -1,0 +1,43 @@
+/*
+ * -----------------------------------------------
+ * App: right bar
+ * -----------------------------------------------
+ */
+#w2p>#w2p-rightbar {
+    position: absolute;
+    top: 50px;
+    right: -200px;
+    width: 200px;
+    height: calc(100% - 50px);
+    background-color: #fed1d1;
+    border-left: 1px solid var(--w2p-app-border-color);
+    transition: transform 0.3s ease;
+}
+
+#w2p>#w2p-rightbar.w2p-rightbar-show {
+    animation: w2p-rightbar-show 0.3s ease forwards;
+}
+
+#w2p>#w2p-rightbar.w2p-rightbar-hide {
+    animation: w2p-rightbar-hide 0.3s ease forwards;
+}
+
+@keyframes w2p-rightbar-hide {
+    from {
+        transform: translateX(-200px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes w2p-rightbar-show {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(-200px);
+    }
+}

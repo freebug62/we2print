@@ -1,0 +1,84 @@
+/*
+ * -----------------------------------------------
+ * App: main
+ * -----------------------------------------------
+ */
+#w2p>#w2p-main {
+    position: absolute;
+    top: 50px;
+    left: 252px;
+    width: calc(100% - 252px);
+    height: calc(100% - 50px);
+    background-color: var(--w2p-window-bg-color);
+}
+
+#w2p-main::before {
+    --hole-width: calc(var(--w2p-dynamic-document-mask-width) * var(--w2p-dynamic-document-scale));
+    --hole-height: calc(var(--w2p-dynamic-document-mask-height) * var(--w2p-dynamic-document-scale));
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--w2p-page-mask-color);
+    pointer-events: none;
+    z-index: 5;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat, no-repeat;
+    -webkit-mask-size:
+        100% 100%,
+        var(--hole-width) var(--hole-height);
+    -webkit-mask-position:
+        0 0,
+        calc(50% - var(--hole-width) / 2) calc(50% - var(--hole-height) / 2);
+    mask-repeat: no-repeat, no-repeat;
+    mask-size: 100% 100%, var(--hole-width) var(--hole-height);
+    mask-position: center center;
+}
+
+/**
+ * -----------------------------------------------
+ * Pages
+ * -----------------------------------------------
+ */
+#w2p>#w2p-main>.w2p-main-page {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+#w2p>#w2p-main>.w2p-main-page.active {
+    display: block;
+}
+
+#w2p>#w2p-main>.w2p-main-page>.w2p-main-page-bglayer {
+    pointer-events: none !important;
+}
+
+#w2p>#w2p-main>.w2p-main-page>.w2p-bleed {
+    position: absolute;
+    background-color: transparent !important;
+    border: 2px dashed var(--w2p-page-bleed-color);
+    pointer-events: none !important;
+    z-index: 999;
+}
+
+#w2p>#w2p-main>.w2p-main-page>.w2p-cutlines {
+    position: absolute;
+    background-color: transparent !important;
+    border: 2px dashed var(--w2p-page-cutline-color);
+    opacity: 0.5;
+    pointer-events: none !important;
+    z-index: 999;
+}
+
+#w2p>#w2p-main>.w2p-main-page>.w2p-shape,
+#w2p>#w2p-main>.w2p-main-page>.w2p-image,
+#w2p>#w2p-main>.w2p-main-page>.w2p-text {
+    position: absolute;
+    user-select: none;
+}

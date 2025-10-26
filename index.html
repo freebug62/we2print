@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>W2P</title>
+        <style>
+            * {
+                text-decoration: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            html,
+            body {
+                min-height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background: #f7f7f7;
+                color: #333;
+                font-family: sans-serif;
+            }
+        </style>
+        <!-- app:styles -->
+        <link rel="stylesheet" href="dist/css/w2p.min.css">
+    </head>
+
+    <body>
+        <div style="padding: 50px; height: calc(100vh - 100px);">
+            <!-- app:html -->
+            <div id="w2p">
+                <!-- topbar: start -->
+                <div id="w2p-topbar">
+                    top menu
+                </div>
+                <!-- topbar: end -->
+                <!-- leftbar: start -->
+                <div id="w2p-leftbar">
+                    <ul class="w2p-leftbar-list">
+                        <li>
+                            <button type="button" id="w2p-leftbar-btn-text" class="w2p-leftbar-btn active">
+                                <img src="dist/asset/ui/text.svg" alt="Text">
+                                Text
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" id="w2p-leftbar-btn-background" class="w2p-leftbar-btn">
+                                <img src="dist/asset/ui/background.svg" alt="Background">
+                                Background
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" id="w2p-leftbar-btn-image" class="w2p-leftbar-btn">
+                                <img src="dist/asset/ui/images.svg" alt="Image">
+                                Images
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" id="w2p-leftbar-btn-shape" class="w2p-leftbar-btn">
+                                <img src="dist/asset/ui/shapes.svg" alt="Shape">
+                                Shapes
+                            </button>
+                        </li>
+                        <li class="separator">
+                            <hr>
+                        </li>
+                        <li>
+                            <button type="button" class="w2p-leftbar-btn-props">
+                                <img src="dist/asset/ui/cogs.svg" alt="Settings">
+                                Properties
+                            </button>
+                        </li>
+                    </ul>
+                    <div>
+                        <div data-ref="w2p-leftbar-btn-text" class="w2p-leftbar-toolbar active">
+                            text
+                        </div>
+                        <div data-ref="w2p-leftbar-btn-background" class="w2p-leftbar-toolbar">
+                            background
+                        </div>
+                        <div data-ref="w2p-leftbar-btn-image" class="w2p-leftbar-toolbar">
+                            images
+                        </div>
+                        <div data-ref="w2p-leftbar-btn-shape" class="w2p-leftbar-toolbar">
+                            shapes
+                        </div>
+                    </div>
+                </div>
+                <!-- leftbar: end -->
+                <!-- main: start -->
+                <div id="w2p-main">
+                    <div class="w2p-main-vertical-ruler"></div>
+                    <div class="w2p-main-horizontal-ruler"></div>
+                </div>
+                <!-- main: end -->
+                <!-- rightbar: start -->
+                <div id="w2p-rightbar">
+                    right menu
+                </div>
+                <!-- rightbar: end -->
+            </div>
+            <!-- app:html -->
+        </div>
+        <!-- app:scripts -->
+        <script src="dist/js/w2p.min.js"></script>
+        <script>
+            /**
+             * -------------------------------------------------------------------
+             * DOMContentLoaded
+             * -------------------------------------------------------------------
+             */
+            document.addEventListener('DOMContentLoaded', () => {
+                // call render() to load the template.
+                // the template must be an object literal.
+                window.w2p.render({
+                    props: {
+                        title: 'Business card',
+                    },
+                    measure: {
+                        dpi: 300,
+                        width: 85,
+                        height: 55,
+                        type: 'mm',
+                        bleed: 5,
+                        cut: 3
+                    },
+                    sides: [
+                        {
+                            background: {
+                                image: 'dist/asset/template/background/mm/85x55/sample-1.jpg',
+                                color: 'tomato',
+                                locked: false
+                            },
+                            text: [
+                                {
+                                    x: 5,
+                                    y: 5,
+                                    text: 'John Doe',
+                                    size: 22, // pt
+                                    color: '#444',
+                                    align: 'left',
+                                    rotate: 0,
+                                    font: 'Arial',
+                                    bold: true,
+                                    italic: false,
+                                    underline: false,
+                                    locked: false
+                                },
+                                {
+                                    x: 5,
+                                    y: 10,
+                                    text: 'My street address, 123 — My city, 12345',
+                                    size: 12, // pt
+                                    color: '#333',
+                                    align: 'left',
+                                    rotate: 0,
+                                    font: 'Verdana',
+                                    bold: false,
+                                    italic: false,
+                                    underline: false,
+                                    locked: false
+                                }
+                            ],
+                            images: [
+                                {
+                                    src: 'dist/asset/template/image/sample-2.png',
+                                    width: 22,
+                                    height: 18,
+                                    x: 35,
+                                    y: 42,
+                                    rotate: 0,
+                                    locked: false
+                                },
+                                {
+                                    src: 'dist/asset/template/image/sample-1.png',
+                                    width: 21,
+                                    height: 12,
+                                    x: 5,
+                                    y: 15,
+                                    rotate: 0,
+                                    locked: true
+                                },
+                                {
+                                    src: 'dist/asset/template/image/sample-3.png',
+                                    width: 25,
+                                    height: 12,
+                                    x: 25,
+                                    y: 25,
+                                    rotate: 0,
+                                    locked: false
+                                },
+                                {
+                                    src: 'dist/asset/template/image/sample-4.png',
+                                    width: 21,
+                                    height: 12,
+                                    x: 63,
+                                    y: 15,
+                                    rotate: -90,
+                                    locked: false
+                                }
+                            ],
+                            shapes: [
+                                {
+                                    src: 'dist/asset/template/shape/circle.svg',
+                                    width: 20,
+                                    height: 20,
+                                    x: 30,
+                                    y: 20,
+                                    rotate: 0,
+                                    color: 'orange',
+                                    locked: false
+                                },
+                                {
+                                    src: 'dist/asset/template/shape/circle-8-in-octogon-layout.svg',
+                                    width: 10,
+                                    height: 10,
+                                    x: 50,
+                                    y: 20,
+                                    rotate: 0,
+                                    color: 'tomato',
+                                    locked: false
+                                }
+                            ]
+                        },
+                        {
+                            background: {
+                                image: 'dist/asset/template/background/mm/85x55/sample-2.jpg',
+                                color: 'orange',
+                                locked: true
+                            },
+                            text: [],
+                            images: [],
+                            shapes: []
+                        }
+                    ]
+                });
+            });
+        </script>
+    </body>
+
+</html>
