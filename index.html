@@ -93,8 +93,20 @@
                 <!-- leftbar: end -->
                 <!-- main: start -->
                 <div id="w2p-main">
-                    <div class="w2p-main-vertical-ruler"></div>
-                    <div class="w2p-main-horizontal-ruler"></div>
+                    <div id="w2p-main-scale" title="Document scale."></div>
+                    <button id="w2p-main-doc-prev-btn" title="Previous page." class="disabled">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                            <path
+                                d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+                        </svg>
+                    </button>
+                    <button id="w2p-main-doc-next-btn" title="Next page.">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                            <path
+                                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+                        </svg>
+                    </button>
+                    <div id="w2p-main-doc-page"></div>
                 </div>
                 <!-- main: end -->
                 <!-- rightbar: start -->
@@ -110,134 +122,141 @@
         <script>
             /**
              * -------------------------------------------------------------------
+             * Sample template
+             * -------------------------------------------------------------------
+             */
+            const template = {
+                props: {
+                    title: 'Business card',
+                },
+                measure: {
+                    dpi: 300,
+                    width: 85,
+                    height: 55,
+                    type: 'mm',
+                    bleed: 5,
+                    cut: 3
+                },
+                sides: [
+                    {
+                        background: {
+                            image: 'dist/asset/template/background/mm/85x55/sample-1.jpg',
+                            color: 'tomato',
+                            locked: false
+                        },
+                        text: [
+                            {
+                                x: 5,
+                                y: 5,
+                                text: 'John Doe',
+                                size: 22, // pt
+                                color: '#444',
+                                align: 'left',
+                                rotate: 0,
+                                font: 'Arial',
+                                bold: true,
+                                italic: false,
+                                underline: false,
+                                locked: false
+                            },
+                            {
+                                x: 5,
+                                y: 10,
+                                text: 'My street address, 123 — My city, 12345',
+                                size: 12, // pt
+                                color: '#333',
+                                align: 'left',
+                                rotate: 0,
+                                font: 'Verdana',
+                                bold: false,
+                                italic: false,
+                                underline: false,
+                                locked: false
+                            }
+                        ],
+                        images: [
+                            {
+                                src: 'dist/asset/template/image/sample-2.png',
+                                width: 22,
+                                height: 18,
+                                x: 35,
+                                y: 42,
+                                rotate: 0,
+                                locked: false
+                            },
+                            {
+                                src: 'dist/asset/template/image/sample-1.png',
+                                width: 23,
+                                height: 12,
+                                x: 5,
+                                y: 15,
+                                rotate: 0,
+                                locked: true
+                            },
+                            {
+                                src: 'dist/asset/template/image/sample-3.png',
+                                width: 25,
+                                height: 12,
+                                x: 25,
+                                y: 25,
+                                rotate: 0,
+                                locked: false
+                            },
+                            {
+                                src: 'dist/asset/template/image/sample-4.png',
+                                width: 21,
+                                height: 12,
+                                x: 63,
+                                y: 15,
+                                rotate: -90,
+                                locked: false
+                            }
+                        ],
+                        shapes: [
+                            {
+                                src: 'dist/asset/template/shape/circle.svg',
+                                width: 20,
+                                height: 20,
+                                x: 30,
+                                y: 20,
+                                rotate: 0,
+                                color: 'orange',
+                                locked: false
+                            },
+                            {
+                                src: 'dist/asset/template/shape/circle-8-in-octogon-layout.svg',
+                                width: 10,
+                                height: 10,
+                                x: 50,
+                                y: 20,
+                                rotate: 0,
+                                color: 'tomato',
+                                locked: false
+                            }
+                        ]
+                    },
+                    {
+                        background: {
+                            image: 'dist/asset/template/background/mm/85x55/sample-2.jpg',
+                            color: 'orange',
+                            locked: true
+                        },
+                        text: [],
+                        images: [],
+                        shapes: []
+                    }
+                ]
+            };
+
+            /**
+             * -------------------------------------------------------------------
              * DOMContentLoaded
              * -------------------------------------------------------------------
              */
             document.addEventListener('DOMContentLoaded', () => {
                 // call render() to load the template.
                 // the template must be an object literal.
-                window.w2p.render({
-                    props: {
-                        title: 'Business card',
-                    },
-                    measure: {
-                        dpi: 300,
-                        width: 85,
-                        height: 55,
-                        type: 'mm',
-                        bleed: 5,
-                        cut: 3
-                    },
-                    sides: [
-                        {
-                            background: {
-                                image: 'dist/asset/template/background/mm/85x55/sample-1.jpg',
-                                color: 'tomato',
-                                locked: false
-                            },
-                            text: [
-                                {
-                                    x: 5,
-                                    y: 5,
-                                    text: 'John Doe',
-                                    size: 22, // pt
-                                    color: '#444',
-                                    align: 'left',
-                                    rotate: 0,
-                                    font: 'Arial',
-                                    bold: true,
-                                    italic: false,
-                                    underline: false,
-                                    locked: false
-                                },
-                                {
-                                    x: 5,
-                                    y: 10,
-                                    text: 'My street address, 123 — My city, 12345',
-                                    size: 12, // pt
-                                    color: '#333',
-                                    align: 'left',
-                                    rotate: 0,
-                                    font: 'Verdana',
-                                    bold: false,
-                                    italic: false,
-                                    underline: false,
-                                    locked: false
-                                }
-                            ],
-                            images: [
-                                {
-                                    src: 'dist/asset/template/image/sample-2.png',
-                                    width: 22,
-                                    height: 18,
-                                    x: 35,
-                                    y: 42,
-                                    rotate: 0,
-                                    locked: false
-                                },
-                                {
-                                    src: 'dist/asset/template/image/sample-1.png',
-                                    width: 21,
-                                    height: 12,
-                                    x: 5,
-                                    y: 15,
-                                    rotate: 0,
-                                    locked: true
-                                },
-                                {
-                                    src: 'dist/asset/template/image/sample-3.png',
-                                    width: 25,
-                                    height: 12,
-                                    x: 25,
-                                    y: 25,
-                                    rotate: 0,
-                                    locked: false
-                                },
-                                {
-                                    src: 'dist/asset/template/image/sample-4.png',
-                                    width: 21,
-                                    height: 12,
-                                    x: 63,
-                                    y: 15,
-                                    rotate: -90,
-                                    locked: false
-                                }
-                            ],
-                            shapes: [
-                                {
-                                    src: 'dist/asset/template/shape/circle.svg',
-                                    width: 20,
-                                    height: 20,
-                                    x: 30,
-                                    y: 20,
-                                    rotate: 0,
-                                    color: 'orange',
-                                    locked: false
-                                },
-                                {
-                                    src: 'dist/asset/template/shape/circle-8-in-octogon-layout.svg',
-                                    width: 10,
-                                    height: 10,
-                                    x: 50,
-                                    y: 20,
-                                    rotate: 0,
-                                    color: 'tomato',
-                                    locked: false
-                                }
-                            ]
-                        },
-                        {
-                            background: {
-                                image: 'dist/asset/template/background/mm/85x55/sample-2.jpg',
-                                color: 'orange',
-                                locked: true
-                            },
-                            text: [],
-                            images: [],
-                            shapes: []
-                        }
-                    ]
-                });
+                window.w2p.render(template);
             });
         </script>
     </body>

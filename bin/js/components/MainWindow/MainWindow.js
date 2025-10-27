@@ -45,6 +45,13 @@ class MainWindow {
     static W2P_SELECTED_ELEMENT_EVENT = 'w2p:selected-element';
 
     /**
+     * @param {string} W2P_SCALE_EVENT The event name for scale event.
+     * @static
+     * @type {string}
+     */
+    static W2P_SCALE_EVENT = 'w2p:scale';
+
+    /**
      * @param {HTMLElement|null} SELECTED_ELEMENT The selected HTMLElement object.
      * @static
      * @type {HTMLElement|null}
@@ -62,6 +69,7 @@ class MainWindow {
             Logger.log('MainWindow: targetElement must be an HTMLElement', 'error');
             return;
         }
+
     }
 
     /**
@@ -97,6 +105,12 @@ class MainWindow {
             MainWindow.WRAP.style.setProperty('--w2p-dynamic-document-mask-width', `${Math.round(MainWindow.TEMPLATE.measure.pxWidth)}px`);
             MainWindow.WRAP.style.setProperty('--w2p-dynamic-document-mask-height', `${Math.round(MainWindow.TEMPLATE.measure.pxHeight)}px`);
             MainWindow.WRAP.style.setProperty('--w2p-dynamic-document-scale', `${(MainWindow.PAGE_SCALE).toFixed(4)}`);
+
+            // update UI page count.
+            document.querySelector('#w2p-main-doc-page').textContent = `Displaying page ${(MainWindow.PAGE_ACTIVE + 1)} of ${MainWindow.PAGES.length} pages.`;
+
+            // initialize document pagination.
+            this._initPagination();
 
             // wait for frame refresh (min. 1ms)
             setTimeout(() => {
@@ -323,6 +337,17 @@ class MainWindow {
     }
 
     /**
+     * Updates the main window scale UI with the given scale.
+     * The scale is displayed as a percentage value.
+     *
+     * @param {number} scale - The scale value to update the element with.
+     * @returns {void}
+     */
+    _scaleUi(scale) {
+        document.getElementById('w2p-main-scale').innerText = `Zoom: ${(scale * 100).toFixed(0)}%`;
+    }
+
+    /**
      * Adds page elements like bleed lines, cut lines, text, images and shapes.
      *
      * @param {object} page - Page object.
@@ -455,6 +480,17 @@ class MainWindow {
         MainWindow.WRAP.style.setProperty('--w2p-dynamic-document-mask-width', `${Math.round(MainWindow.TEMPLATE.measure.pxWidth)}px`);
         MainWindow.WRAP.style.setProperty('--w2p-dynamic-document-mask-height', `${Math.round(MainWindow.TEMPLATE.measure.pxHeight)}px`);
         MainWindow.WRAP.style.setProperty('--w2p-dynamic-document-scale', `${(MainWindow.PAGE_SCALE).toFixed(4)}`);
+
+        // send scale change event.
+        const customEvent = new CustomEvent(MainWindow.W2P_SCALE_EVENT, {
+            bubbles: true,
+            detail: {
+                scale: MainWindow.PAGE_SCALE
+            }
+        });
+
+        MainWindow.WRAP.dispatchEvent(customEvent);
+        this._scaleUi(MainWindow.PAGE_SCALE);
     }
 
     /**
@@ -480,6 +516,81 @@ class MainWindow {
         }
 
         MainWindow.TEMPLATE = template;
+    }
+
+    _initPagination() {
+        const prevbtn = document.getElementById('w2p-main-doc-prev-btn');
+        const nextbtn = document.getElementById('w2p-main-doc-next-btn');
+        const label = document.getElementById('w2p-main-doc-page');
+        const paginateTo = index => {
+            let i;
+
+            for (i = 0; i < MainWindow.PAGES.length; i++) {
+                if (i === index) {
+                    MainWindow.PAGES[i].page.classList.add('active');
+                    label.textContent = `Displaying page ${(index + 1)} of ${MainWindow.PAGES.length} pages.`;
+                } else {
+                    MainWindow.PAGES[i].page.classList.remove('active');
+                }
+            }
+        };
+
+        if (MainWindow.PAGES.length < 2) {
+            prevbtn.classList.add('disabled');
+            prevbtn.style.display = 'none';
+            nextbtn.classList.add('disabled');
+            nextbtn.style.display = 'none';
+
+            return;
+        }
+
+        let currentPageIndex = MainWindow.PAGE_ACTIVE;
+
+        prevbtn.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            currentPageIndex--;
+
+            if (currentPageIndex < 0) {
+                currentPageIndex = 0;
+            }
+
+            if (currentPageIndex === MainWindow.PAGE_ACTIVE) {
+                return;
+            }
+
+            if (currentPageIndex === 0) {
+                prevbtn.classList.add('disabled');
+            }
+
+            nextbtn.classList.remove('disabled');
+            MainWindow.PAGE_ACTIVE = currentPageIndex;
+            paginateTo(currentPageIndex);
+        });
+
+        nextbtn.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            currentPageIndex++;
+
+            if (currentPageIndex > MainWindow.PAGES.length - 1) {
+                currentPageIndex = MainWindow.PAGES.length - 1;
+            }
+
+            if (currentPageIndex === MainWindow.PAGE_ACTIVE) {
+                return;
+            }
+
+            if ((currentPageIndex + 1) >= MainWindow.PAGES.length) {
+                nextbtn.classList.add('disabled');
+            }
+
+            prevbtn.classList.remove('disabled');
+            MainWindow.PAGE_ACTIVE = currentPageIndex;
+            paginateTo(currentPageIndex);
+        });
     }
 }
 

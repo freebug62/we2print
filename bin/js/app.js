@@ -95,8 +95,24 @@ class W2P {
 
             // @todo: selected text must be wrapped by resize/rotate handles.
 
-            Logger.log('@todo: wrap selected text to resize/rotate handles.', 'info');
-            console.log(element, targetpage);
+            console.log('--------- selected element event ---------');
+            console.log(element);
+            console.log(targetpage);
+        });
+
+        //:: scale event.
+        W2P.APP_WRAP.addEventListener(MainWindow.W2P_SCALE_EVENT, (e) => {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            const scale = e.detail.scale ?? null;
+
+            if (!scale) {
+                Logger.log('W2P: scale event provided no detail context.', 'error');
+                return;
+            }
+
+
         });
     }
 

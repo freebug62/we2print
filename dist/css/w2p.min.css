@@ -26,6 +26,7 @@
     --w2p-page-bleed-color: #7777ff;
     --w2p-page-cutline-color: #ff7777;
     --w2p-page-mask-color: rgba(0, 0, 0, 0.8);
+    --w2p-page-scale-color: #656565;
 }
 
 /*
@@ -128,6 +129,7 @@
     background-color: #fed1d1;
     border-left: 1px solid var(--w2p-app-border-color);
     transition: transform 0.3s ease;
+    z-index: 999;
 }
 
 #w2p>#w2p-rightbar.w2p-rightbar-show {
@@ -287,6 +289,7 @@
     width: calc(100% - 252px);
     height: calc(100% - 50px);
     background-color: var(--w2p-window-bg-color);
+    overflow: hidden;
 }
 
 #w2p-main::before {
@@ -299,6 +302,9 @@
     pointer-events: none;
     z-index: 5;
     -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -315,6 +321,85 @@
     mask-position: center center;
 }
 
+#w2p-main>#w2p-main-doc-page,
+#w2p-main>#w2p-main-scale {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 999;
+    user-select: none;
+    pointer-events: none;
+    color: var(--w2p-page-scale-color);
+    font-size: 11px;
+    font-family: 'Helvetica', 'Verdana', 'Arial', 'sans-serif';
+}
+
+#w2p-main>#w2p-main-doc-page {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#w2p-main>#w2p-main-doc-next-btn {
+    left: calc(50% + 80px) !important;
+}
+
+#w2p-main>#w2p-main-doc-prev-btn,
+#w2p-main>#w2p-main-doc-next-btn {
+    position: absolute;
+    bottom: -1px;
+    left: calc(50% - 104px);
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #5f5f5f;
+    border-radius: 25px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out 0.3s;
+}
+
+#w2p-main>#w2p-main-doc-prev-btn>svg,
+#w2p-main>#w2p-main-doc-next-btn>svg {
+    height: 10px;
+}
+
+#w2p-main>#w2p-main-doc-prev-btn>svg>path,
+#w2p-main>#w2p-main-doc-next-btn>svg>path {
+    fill: #5f5f5f;
+    transition: ease-in-out 0.3s;
+}
+
+#w2p-main>#w2p-main-doc-prev-btn.disabled,
+#w2p-main>#w2p-main-doc-next-btn.disabled {
+    opacity: 0.5;
+    border-color: #5f5f5f !important;
+}
+
+#w2p-main>#w2p-main-doc-prev-btn.disabled>svg>path,
+#w2p-main>#w2p-main-doc-next-btn.disabled>svg>path {
+    fill: #5f5f5f !important;
+}
+
+#w2p-main>#w2p-main-doc-prev-btn:hover,
+#w2p-main>#w2p-main-doc-next-btn:hover {
+    border-color: #f7f7f7;
+}
+
+#w2p-main>#w2p-main-doc-prev-btn:hover svg>path,
+#w2p-main>#w2p-main-doc-next-btn:hover svg>path {
+    fill: #fff;
+}
+
 /**
  * -----------------------------------------------
  * Pages
@@ -326,10 +411,12 @@
     top: 0;
     left: 0;
     background-color: #fff;
+    overflow: none;
 }
 
 #w2p>#w2p-main>.w2p-main-page.active {
     display: block;
+    overflow: visible;
 }
 
 #w2p>#w2p-main>.w2p-main-page>.w2p-main-page-bglayer {
