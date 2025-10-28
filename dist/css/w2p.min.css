@@ -446,3 +446,13 @@
     position: absolute;
     user-select: none;
 }
+
+/**
+ * -----------------------------------------------
+ * Page element wrapper (rotate, resize, move)
+ * -----------------------------------------------
+ */
+#w2p>#w2p-main>.w2p-main-page>.w2p-element-wrap {
+    position: absolute;
+    border: 2px dashed var(--w2p-page-cutline-color);
+}

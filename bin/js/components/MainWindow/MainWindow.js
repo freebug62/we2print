@@ -69,7 +69,6 @@ class MainWindow {
             Logger.log('MainWindow: targetElement must be an HTMLElement', 'error');
             return;
         }
-
     }
 
     /**
@@ -176,6 +175,8 @@ class MainWindow {
                 return;
             }
 
+            this._moveWrapper(event.currentTarget);
+
             const customEvent = new CustomEvent(MainWindow.W2P_SELECTED_ELEMENT_EVENT, {
                 bubbles: true,
                 detail: {
@@ -226,6 +227,7 @@ class MainWindow {
 
         image.src = imageObj.src;
         image.style.transform = `rotate(${imageObj.rotate}deg)`;
+        image.draggable = false;
         page.appendChild(image);
 
         if (imageObj.locked) {
@@ -240,6 +242,8 @@ class MainWindow {
             if (MainWindow.SELECTED_ELEMENT === event.currentTarget) {
                 return;
             }
+
+            this._moveWrapper(event.currentTarget);
 
             const customEvent = new CustomEvent(MainWindow.W2P_SELECTED_ELEMENT_EVENT, {
                 bubbles: true,
@@ -316,6 +320,8 @@ class MainWindow {
                     if (MainWindow.SELECTED_ELEMENT === event.currentTarget) {
                         return;
                     }
+
+                    this._moveWrapper(event.currentTarget);
 
                     const customEvent = new CustomEvent(MainWindow.W2P_SELECTED_ELEMENT_EVENT, {
                         bubbles: true,
@@ -518,6 +524,12 @@ class MainWindow {
         MainWindow.TEMPLATE = template;
     }
 
+    /**
+     * Initializes the pagination of the main window document pages.
+     *
+     * @private
+     * @returns {void}
+     */
     _initPagination() {
         const prevbtn = document.getElementById('w2p-main-doc-prev-btn');
         const nextbtn = document.getElementById('w2p-main-doc-next-btn');
@@ -591,6 +603,103 @@ class MainWindow {
             MainWindow.PAGE_ACTIVE = currentPageIndex;
             paginateTo(currentPageIndex);
         });
+    }
+
+    _moveWrapper(element) {
+        const wrap = document.createElement('div');
+        const resizewrap = document.createElement('div');
+        const rotatewrap = document.createElement('div');
+        const page = element.parentElement;
+        const padding = 2; // wrapper border px.
+
+        // add element to wrapper.
+        wrap.classList.add('w2p-element-wrap');
+        wrap.style.top = `${element.offsetTop - padding}px`;
+        wrap.style.left = `${element.offsetLeft - padding}px`;
+        wrap.style.width = `${element.offsetWidth}px`;
+        wrap.style.height = `${element.offsetHeight}px`;
+        wrap.style.transform = element.style.transform;
+
+        element.removeAttribute('style');
+        element.style.width = '100%';
+        element.style.height = '100%';
+
+        // :: svg
+        if (element.tagName === 'svg') {
+            console.log('svg: ', element.getScreenCTM(), element.style.width, element.style.height);
+        }
+
+        page.insertBefore(wrap, element);
+        wrap.appendChild(element);
+
+        // allow wrap to be drag around target.
+        const scale = MainWindow.PAGE_SCALE || 1;
+        let startLocalX = 0, startLocalY = 0;
+        let origLeft = 0, origTop = 0;
+        let isDown = false;
+        let invMatrix = null;
+        let rect = null;
+
+        function getInverseMatrix(el) {
+            const style = window.getComputedStyle(el);
+            const t = style.transform;
+            if (!t || t === 'none') return new DOMMatrix(); // identity
+            return new DOMMatrix(t).inverse();
+        }
+
+        function clientToLocal(clientX, clientY) {
+            // Convert screen coords to local element coords
+            const px = clientX - rect.left;
+            const py = clientY - rect.top;
+            const local = invMatrix.transformPoint(new DOMPoint(px, py));
+            return { x: local.x, y: local.y };
+        }
+
+        wrap.addEventListener('mousedown', e => {
+            isDown = true;
+            wrap.style.cursor = 'grabbing';
+
+            rect = page.getBoundingClientRect();
+            invMatrix = getInverseMatrix(page);
+
+            // Mouse point in local (unrotated) coords
+            const local = clientToLocal(e.clientX, e.clientY);
+            startLocalX = local.x;
+            startLocalY = local.y;
+
+            origLeft = parseFloat(wrap.style.left || 0);
+            origTop = parseFloat(wrap.style.top || 0);
+
+            e.preventDefault();
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDown = false;
+            wrap.style.cursor = 'grab';
+        });
+
+        document.addEventListener('mousemove', e => {
+            if (!isDown) return;
+
+            const local = clientToLocal(e.clientX, e.clientY);
+
+            const dx = (local.x - startLocalX) / scale;
+            const dy = (local.y - startLocalY) / scale;
+
+            let x = origLeft + dx;
+            let y = origTop + dy;
+
+            // Boundaries in *local coordinates* (not screen-space)
+            const maxX = (page.clientWidth - wrap.offsetWidth);
+            const maxY = (page.clientHeight - wrap.offsetHeight);
+
+            x = Math.max(0, Math.min(x, maxX));
+            y = Math.max(0, Math.min(y, maxY));
+
+            wrap.style.left = x + 'px';
+            wrap.style.top = y + 'px';
+        });
+
     }
 }
 
