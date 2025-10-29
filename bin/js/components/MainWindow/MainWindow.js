@@ -454,9 +454,37 @@ class MainWindow {
             page: wrapper
         });
 
+        wrapper.addEventListener('mousedown', (e) => {
+            if (!e.target.classList.contains('w2p-main-page')) {
+                return;
+            }
+
+            this._deselectAllElements(e.currentTarget);
+        });
+
         // update page size on window resize.
         window.addEventListener('resize', () => {
             this._updatePagesScale();
+        });
+    }
+
+    _deselectAllElements(page) {
+        page.querySelectorAll('.w2p-element-wrap').forEach((element) => {
+            // get child element.
+            const el = element.children[0];
+
+            // update child element with wrapper matrix and style.
+            el.style.transform = element.style.transform;
+            el.style.top = (element.style.top.replace('px', '') + 2) + 'px';
+            el.style.left = element.style.left;
+            el.style.width = element.style.width;
+            el.style.height = element.style.height;
+
+            console.log(el.tagName)
+
+            // remove from move wrapper and re-insert on same position.
+            page.insertBefore(el, element);
+            element.remove();
         });
     }
 
@@ -673,12 +701,62 @@ class MainWindow {
             if (!isDown) return;
             isDown = false;
             wrap.style.cursor = 'grab';
+
+            // --- Snap to nearest corner if completely off the page ---
+            const pageW = page.clientWidth;
+            const pageH = page.clientHeight;
+            const w = wrap.offsetWidth;
+            const h = wrap.offsetHeight;
+            const left = parseFloat(wrap.style.left);
+            const top = parseFloat(wrap.style.top);
+
+            const completelyOffRight = left > pageW;
+            const completelyOffLeft = left + w < 0;
+            const completelyOffBottom = top > pageH;
+            const completelyOffTop = top + h < 0;
+
+            const fullyOut =
+                (completelyOffRight || completelyOffLeft || completelyOffBottom || completelyOffTop);
+
+            if (fullyOut) {
+                // compute distances to each corner
+                const corners = [
+                    { name: 'tl', x: 0, y: 0 },
+                    { name: 'tr', x: pageW - w, y: 0 },
+                    { name: 'bl', x: 0, y: pageH - h },
+                    { name: 'br', x: pageW - w, y: pageH - h },
+                ];
+
+                const centerX = left + w / 2;
+                const centerY = top + h / 2;
+
+                let nearest = corners[0];
+                let minDist = Infinity;
+                for (const c of corners) {
+                    const dx = centerX - (c.x + w / 2);
+                    const dy = centerY - (c.y + h / 2);
+                    const d = dx * dx + dy * dy;
+                    if (d < minDist) {
+                        minDist = d;
+                        nearest = c;
+                    }
+                }
+
+                // Smooth snap animation
+                wrap.style.transition = 'left 0.2s ease-out, top 0.2s ease-out';
+                wrap.style.left = `${nearest.x}px`;
+                wrap.style.top = `${nearest.y}px`;
+
+                // Remove transition after animation
+                setTimeout(() => {
+                    wrap.style.transition = '';
+                }, 250);
+            }
         });
 
         document.addEventListener('mousemove', e => {
             if (!isDown) return;
 
-            // Use locked rect+matrix from mousedown
             const local = clientToLocal(e.clientX, e.clientY);
             const dx = (local.x - startLocalX) / scale;
             const dy = (local.y - startLocalY) / scale;
@@ -686,8 +764,6 @@ class MainWindow {
             wrap.style.left = `${origLeft + dx}px`;
             wrap.style.top = `${origTop + dy}px`;
         });
-
-
     }
 }
 
