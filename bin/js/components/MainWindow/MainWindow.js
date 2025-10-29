@@ -607,32 +607,30 @@ class MainWindow {
 
     _moveWrapper(element) {
         const wrap = document.createElement('div');
-        const resizewrap = document.createElement('div');
-        const rotatewrap = document.createElement('div');
         const page = element.parentElement;
-        const padding = 2; // wrapper border px.
+        const padding = 2;
 
-        // add element to wrapper.
         wrap.classList.add('w2p-element-wrap');
-        wrap.style.top = `${element.offsetTop - padding}px`;
-        wrap.style.left = `${element.offsetLeft - padding}px`;
-        wrap.style.width = `${element.offsetWidth}px`;
-        wrap.style.height = `${element.offsetHeight}px`;
-        wrap.style.transform = element.style.transform;
 
-        element.removeAttribute('style');
-        element.style.width = '100%';
-        element.style.height = '100%';
-
-        // :: svg
         if (element.tagName === 'svg') {
-            console.log('svg: ', element.getScreenCTM(), element.style.width, element.style.height);
+            wrap.style.top = `${parseFloat(getComputedStyle(element).top) - padding}px`;
+            wrap.style.left = `${parseFloat(getComputedStyle(element).left) - padding}px`;
+            wrap.style.width = `${element.width.baseVal.value}px`;
+            wrap.style.height = `${element.height.baseVal.value}px`;
+        } else {
+            wrap.style.top = `${element.offsetTop - padding}px`;
+            wrap.style.left = `${element.offsetLeft - padding}px`;
+            wrap.style.width = `${element.offsetWidth}px`;
+            wrap.style.height = `${element.offsetHeight}px`;
         }
+
+        wrap.style.position = 'absolute';
+        wrap.style.transform = element.style.transform;
+        wrap.style.cursor = 'grab';
 
         page.insertBefore(wrap, element);
         wrap.appendChild(element);
 
-        // allow wrap to be drag around target.
         const scale = MainWindow.PAGE_SCALE || 1;
         let startLocalX = 0, startLocalY = 0;
         let origLeft = 0, origTop = 0;
@@ -641,14 +639,12 @@ class MainWindow {
         let rect = null;
 
         function getInverseMatrix(el) {
-            const style = window.getComputedStyle(el);
-            const t = style.transform;
-            if (!t || t === 'none') return new DOMMatrix(); // identity
+            const t = getComputedStyle(el).transform;
+            if (!t || t === 'none') return new DOMMatrix();
             return new DOMMatrix(t).inverse();
         }
 
         function clientToLocal(clientX, clientY) {
-            // Convert screen coords to local element coords
             const px = clientX - rect.left;
             const py = clientY - rect.top;
             const local = invMatrix.transformPoint(new DOMPoint(px, py));
@@ -659,10 +655,10 @@ class MainWindow {
             isDown = true;
             wrap.style.cursor = 'grabbing';
 
-            rect = page.getBoundingClientRect();
-            invMatrix = getInverseMatrix(page);
+            // Lock matrix + rect at drag start
+            rect = wrap.getBoundingClientRect();
+            invMatrix = getInverseMatrix(wrap);
 
-            // Mouse point in local (unrotated) coords
             const local = clientToLocal(e.clientX, e.clientY);
             startLocalX = local.x;
             startLocalY = local.y;
@@ -674,6 +670,7 @@ class MainWindow {
         });
 
         document.addEventListener('mouseup', () => {
+            if (!isDown) return;
             isDown = false;
             wrap.style.cursor = 'grab';
         });
@@ -681,24 +678,15 @@ class MainWindow {
         document.addEventListener('mousemove', e => {
             if (!isDown) return;
 
+            // Use locked rect+matrix from mousedown
             const local = clientToLocal(e.clientX, e.clientY);
-
             const dx = (local.x - startLocalX) / scale;
             const dy = (local.y - startLocalY) / scale;
 
-            let x = origLeft + dx;
-            let y = origTop + dy;
-
-            // Boundaries in *local coordinates* (not screen-space)
-            const maxX = (page.clientWidth - wrap.offsetWidth);
-            const maxY = (page.clientHeight - wrap.offsetHeight);
-
-            x = Math.max(0, Math.min(x, maxX));
-            y = Math.max(0, Math.min(y, maxY));
-
-            wrap.style.left = x + 'px';
-            wrap.style.top = y + 'px';
+            wrap.style.left = `${origLeft + dx}px`;
+            wrap.style.top = `${origTop + dy}px`;
         });
+
 
     }
 }
