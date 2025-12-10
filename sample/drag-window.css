@@ -1,0 +1,49 @@
+:root {
+    --drag-window-width: 250px;
+    --drag-window-handle-bg-color: #1b8aff;
+    --drag-window-handle-color: #fff;
+}
+
+/* ----------------------------------------------
+    The main window
+    ---------------------------------------------- */
+.drag-window {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: var(--drag-window-width);
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    z-index: 9;
+    user-select: none;
+    overflow: hidden;
+}
+
+/* ----------------------------------------------
+    The window handle
+    ---------------------------------------------- */
+.drag-window>.drag-window-handle {
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: var(--drag-window-handle-bg-color);
+    color: var(--drag-window-handle-color);
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 6px 6px 0 0;
+    cursor: move;
+    user-select: none;
+    -webkit-app-region: drag;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ----------------------------------------------
+    The window content
+    ---------------------------------------------- */
+.drag-window>.drag-window-content {
+    padding: 10px;
+}

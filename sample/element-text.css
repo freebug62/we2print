@@ -1,0 +1,15 @@
+.element-text>#element-text-input {
+    font-size: 21px;
+}
+
+.element-text-props>div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#element-text-color-input {
+    border: 0;
+    padding: 0;
+    border-radius: 4px;
+}

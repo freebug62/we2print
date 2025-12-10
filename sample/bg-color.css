@@ -1,0 +1,146 @@
+/* ---------------------------------------------
+    The floating window
+--------------------------------------------- */
+#bg-colorpicker {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: 250px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    z-index: 9;
+    user-select: none;
+    overflow: hidden;
+    display: none;
+}
+
+#bg-colorpicker>h3 {
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: #1b8aff;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 6px 6px 0 0;
+    cursor: move;
+    user-select: none;
+    -webkit-app-region: drag;
+}
+
+#bg-colorpicker>.bg-colorpicker_note {
+    font-size: 10px;
+    padding: 15px;
+    color: #999;
+
+}
+
+#bg-colorpicker>.bg-color-picker_wrap {
+    padding: 0 15px 15px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bg-colorpicker>.bg-color-picker_wrap>.bg-color-picker_preview {
+    width: 50px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+#bg-colorpicker>.bg-color-picker_wrap>.bg-color-picker_preview>#bg-color-picker_preview-hover {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    border: 1px solid #ddd;
+}
+
+#bg-colorpicker>.bg-color-picker_wrap>.bg-color-picker_preview>#bg-color-picker_preview-selected {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #ddd;
+    pointer-events: none;
+    border: 1px solid #ddd;
+}
+
+#bg-colorpicker>.bg-color-picker_wrap>.bg-color-picker_picker {
+    width: calc(100% - 60px);
+    height: 90px;
+    position: relative;
+}
+
+#bg-colorpicker>.bg-color-picker_wrap>.bg-color-picker_picker>#bg-color-picker_palette-picker {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    cursor: crosshair;
+}
+
+#bg-colorpicker>.bg-color-picker_wrap>.bg-color-picker_picker>#bg-color-picker_palette-pointer {
+    position: absolute;
+    top: 87px;
+    left: 35px;
+    border: 1px solid #1b8aff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#bg-colorpicker>.bg-color-picker-input {
+    padding: 15px;
+    padding-top: 0;
+}
+
+
+#bg-colorpicker>.bg-color-picker-input>.bg-color-picker-input_hex {
+    margin-bottom: 5px;
+}
+
+#bg-colorpicker>.bg-color-picker-input input {
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    padding: 3px 5px;
+    font-size: 12px;
+    outline: none;
+    box-shadow: none;
+}
+
+#bg-colorpicker>.bg-color-picker-input>.bg-color-picker-input_hex>input {
+    width: 100%;
+    text-transform: uppercase;
+}
+
+#bg-colorpicker>.bg-color-picker-input>.bg-color-picker-input_cmyk>div {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+#bg-colorpicker>.bg-color-picker-input>.bg-color-picker-input_cmyk>div>input {
+    width: calc(25% - 5px);
+}
+
+#bg-colorpicker>.bg-color-picker-input>.bg-color-picker-input_hex>span,
+#bg-colorpicker>.bg-color-picker-input>.bg-color-picker-input_cmyk>span {
+    font-size: 8px;
+    color: #999;
+    display: block;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    #bg-colorpicker {
+        top: 55px !important;
+        left: 55px !important;
+    }
+}

@@ -1,0 +1,5 @@
+.document-info>p>strong {
+    display: inline-block;
+    width: 100px;
+    color: #999;
+}

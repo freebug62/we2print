@@ -1,0 +1,114 @@
+[
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-1.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 1 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-2.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 2 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-3.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 3 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-4.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 4 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-5.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 5 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-6.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 6 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-7.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 7 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-1.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 8 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-2.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 9 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-3.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 10 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-4.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 11 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-5.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 12 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-6.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 13 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-7.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 14 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-1.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 15 (85x55mm)"
+    },
+    {
+        "path": "dist/asset/template/background/mm/85x55/sample-2.jpg",
+        "width": 85,
+        "height": 55,
+        "measure": "mm",
+        "description": "Sample image 16 (85x55mm)"
+    }
+]

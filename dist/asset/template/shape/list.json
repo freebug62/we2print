@@ -1,0 +1,884 @@
+[
+    {
+        "src": "dist\/asset\/template\/shape\/aggressive-streak-sm.svg",
+        "width": "500",
+        "height": "180",
+        "description": "Aggressive Streak Sm 500x180"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/arrow-cursor-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Arrow Cursor Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/arrow-right-regular.svg",
+        "width": "24",
+        "height": "24",
+        "description": "Arrow Right Regular 24x24"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/arrowhead-rounded-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Arrowhead Rounded Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/badge-03.svg",
+        "width": "1000",
+        "height": "1000",
+        "description": "Badge 03 1000x1000"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/badge-08.svg",
+        "width": "1000",
+        "height": "1000",
+        "description": "Badge 08 1000x1000"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/badge-11.svg",
+        "width": "1000",
+        "height": "1000",
+        "description": "Badge 11 1000x1000"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/badge-12.svg",
+        "width": "1000",
+        "height": "1000",
+        "description": "Badge 12 1000x1000"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/badge-16.svg",
+        "width": "1000",
+        "height": "1000",
+        "description": "Badge 16 1000x1000"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/badge-20.svg",
+        "width": "1000",
+        "height": "1000",
+        "description": "Badge 20 1000x1000"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/badge-26.svg",
+        "width": "1000",
+        "height": "1000",
+        "description": "Badge 26 1000x1000"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/badge-diamond.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Badge Diamond 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/badge-square-diamond.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Badge Square Diamond 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/badge-square.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Badge Square 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/blob-spray-stroke-sm.svg",
+        "width": "500",
+        "height": "180",
+        "description": "Blob Spray Stroke Sm 500x180"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/check-stroke.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Check Stroke 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/chevron-point-regular.svg",
+        "width": "24",
+        "height": "24",
+        "description": "Chevron Point Regular 24x24"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-4-in-diamond-layout-filled.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle 4 In Diamond Layout Filled 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-4-in-diamond-layout.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle 4 In Diamond Layout 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-4-in-square-layout.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle 4 In Square Layout 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-4-star-X-shape-bloat.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle 4 Star X Shape Bloat 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-4-X-shape-cones.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle 4 X Shape Cones 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-4-X-shape.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle 4 X Shape 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-8-in-octogon-layout.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle 8 In Octogon Layout 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-8-star-bloat.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle 8 Star Bloat 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-bloat.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Bloat 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-half-4-pinwheel-shape-cutout.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Half 4 Pinwheel Shape Cutout 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-half-4-pinwheel-shape.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Half 4 Pinwheel Shape 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-half-4-square-layout.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Half 4 Square Layout 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-half-donut-mirror.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Half Donut Mirror 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-in-circle-quarter-donut.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle In Circle Quarter Donut 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-in-circle.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle In Circle 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-intersection-in-circle-layout.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Intersection In Circle Layout 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-intersection-in-plus-and-X-shape-layout.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Intersection In Plus And X Shape Layout 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-intersection-in-X-shape-layout.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Intersection In X Shape Layout 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-large-donut.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Large Donut 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Circle Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-quarter-alternates.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Quarter Alternates 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-quarter-circle-cutout-corners.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Quarter Circle Cutout Corners 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-quarter-corners.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Quarter Corners 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-quarter-leaf-shape-stack.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Quarter Leaf Shape Stack 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle-quarter-offset-alternates.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle Quarter Offset Alternates 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/circle.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Circle 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/close-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Close Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/cross-8-bulb-shape.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Cross 8 Bulb Shape 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/cross-8-petal.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Cross 8 Petal 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/cross-8-pizza-shape-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Cross 8 Pizza Shape Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/cross-connector-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Cross Connector Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/cross-petal-4-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Cross Petal 4 Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/cross-triangle-long-8.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Cross Triangle Long 8 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/cross-triangle-long.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Cross Triangle Long 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/curtain-rod-arrowhead.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Curtain Rod Arrowhead 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/curtain-rod-fancy.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Curtain Rod Fancy 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/diamond-large-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Diamond Large Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/diamond-medium-alternates.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Diamond Medium Alternates 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/diamond-medium-arrow-shape.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Diamond Medium Arrow Shape 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/diamond-medium-X-shape.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Diamond Medium X Shape 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/diamond-thin-plus-and-X-shape.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Diamond Thin Plus And X Shape 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/diamond-thin-plus-shape-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Diamond Thin Plus Shape Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/dots-bullet.svg",
+        "width": "24",
+        "height": "24",
+        "description": "Dots Bullet 24x24"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/eye-dropper.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Eye Dropper 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/finger-pointer.svg",
+        "width": "24",
+        "height": "24",
+        "description": "Finger Pointer 24x24"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/five-circles.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Five Circles 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/five-diamonds.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Five Diamonds 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/five-stars-depth.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Five Stars Depth 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/flower-bulb-petals.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Flower Bulb Petals 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/flower-circle-4-filled.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Flower Circle 4 Filled 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/flower-circle-halves-overlap-round-star.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Flower Circle Halves Overlap Round Star 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/flower-circle-intersection-in-plus-and-X-shape-layout.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Flower Circle Intersection In Plus And X Shape Layout 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/flower-star-rectangle-12-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Flower Star Rectangle 12 Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/flower-star-rectangle-8-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Flower Star Rectangle 8 Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/flowing-stroke-sm.svg",
+        "width": "500",
+        "height": "180",
+        "description": "Flowing Stroke Sm 500x180"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/frame-01.svg",
+        "width": "480",
+        "height": "360",
+        "description": "Frame 01 480x360"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/frame-02.svg",
+        "width": "480",
+        "height": "360",
+        "description": "Frame 02 480x360"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/frame-09.svg",
+        "width": "480",
+        "height": "360",
+        "description": "Frame 09 480x360"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/frame-11.svg",
+        "width": "480",
+        "height": "360",
+        "description": "Frame 11 480x360"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/frame-15.svg",
+        "width": "480",
+        "height": "360",
+        "description": "Frame 15 480x360"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/frame-23.svg",
+        "width": "480",
+        "height": "360",
+        "description": "Frame 23 480x360"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/frame-24.svg",
+        "width": "480",
+        "height": "360",
+        "description": "Frame 24 480x360"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/frame-29.svg",
+        "width": "480",
+        "height": "360",
+        "description": "Frame 29 480x360"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/frame-30.svg",
+        "width": "480",
+        "height": "360",
+        "description": "Frame 30 480x360"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/frame-4.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Frame 4 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/frame-40.svg",
+        "width": "480",
+        "height": "360",
+        "description": "Frame 40 480x360"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/gear-settings-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Gear Settings Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/gradient-fade-center-steps.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Gradient Fade Center Steps 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/hand-pointer.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Hand Pointer 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/heart-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Heart Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/heart.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Heart 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/hexagon.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Hexagon 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/hourglass-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Hourglass Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/intersecting-curves.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Intersecting Curves 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/intersecting-wave-layers.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Intersecting Wave Layers 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/intersecting-waves-scattered.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Intersecting Waves Scattered 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/layered-arch.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Layered Arch 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/layered-triangle.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Layered Triangle 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/lightning-bolt-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Lightning Bolt Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/line-circle.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Line Circle 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/line-diamond.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Line Diamond 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/line-mouth.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Line Mouth 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/link-stroke.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Link Stroke 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/lock-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Lock Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/marker-paint-md.svg",
+        "width": "750",
+        "height": "180",
+        "description": "Marker Paint Md 750x180"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/minus-bullet-regular.svg",
+        "width": "24",
+        "height": "24",
+        "description": "Minus Bullet Regular 24x24"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/mix-circle-quarter-donut-circle-half-small.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Mix Circle Quarter Donut Circle Half Small 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/mix-rectangles-circle-halves-filled.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Mix Rectangles Circle Halves Filled 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/mix-square-circle-quarter-corners-circle-cutout.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Mix Square Circle Quarter Corners Circle Cutout 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/mix-square-circle-quarter-corners-donut.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Mix Square Circle Quarter Corners Donut 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/mix-square-diamond.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Mix Square Diamond 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/move.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Move 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/musical-note.svg",
+        "width": "24",
+        "height": "24",
+        "description": "Musical Note 24x24"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/not-allowed.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Not Allowed 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/outward-arrows.svg",
+        "width": "880",
+        "height": "50",
+        "description": "Outward Arrows 880x50"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/pattern-arrow-blocks.svg",
+        "width": "800",
+        "height": "100",
+        "description": "Pattern Arrow Blocks 800x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/pattern-ovals-and-diamonds.svg",
+        "width": "200",
+        "height": "80",
+        "description": "Pattern Ovals And Diamonds 200x80"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/paw.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Paw 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/pentagon.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Pentagon 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/plus-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Plus Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/question-mark-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Question Mark Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/quotation-marks-square.svg",
+        "width": "24",
+        "height": "24",
+        "description": "Quotation Marks Square 24x24"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/rectangle-quarter-hashtag-shape.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Rectangle Quarter Hashtag Shape 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/rectangle-third-plus-shape.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Rectangle Third Plus Shape 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/rectangle-third-round-plus-shape.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Rectangle Third Round Plus Shape 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/rectangle-third-round-X-shape.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Rectangle Third Round X Shape 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/shape-circle-halves-overlap-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Shape Circle Halves Overlap Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/shape-heart-tilt.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Shape Heart Tilt 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/shape-heart.svg",
+        "width": "480",
+        "height": "438.82",
+        "description": "Shape Heart 480x438.82"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/spikes-divider-medium.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Spikes Divider Medium 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/square-diamond-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Square Diamond Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/square-large-donut.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Square Large Donut 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/square-large-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Square Large Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/square-medium-cascade.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Square Medium Cascade 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/square-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Square Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/square-tiny-alternates.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Square Tiny Alternates 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/square.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Square 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/star-5pt-outline.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Star 5pt Outline 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/star-rectangle-16-bloat-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Star Rectangle 16 Bloat Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/star-rectangle-16-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Star Rectangle 16 Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/star-rectangle-4-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Star Rectangle 4 Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/star-rectangle-8-round.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Star Rectangle 8 Round 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/stripes-divider-large.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Stripes Divider Large 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/target-scope.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Target Scope 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/thumbs-up.svg",
+        "width": 48,
+        "height": 48,
+        "description": "Thumbs Up 48x48"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/triangle-half.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Triangle Half 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/triangle-quarter-long-2.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Triangle Quarter Long 2 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/triangle.svg",
+        "width": "480",
+        "height": "480",
+        "description": "Triangle 480x480"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/waves-2-large.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Waves 2 Large 1000x100"
+    },
+    {
+        "src": "dist\/asset\/template\/shape\/wings-diamond.svg",
+        "width": "1000",
+        "height": "100",
+        "description": "Wings Diamond 1000x100"
+    }
+]

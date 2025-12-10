@@ -1,0 +1,110 @@
+.draw-element-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px
+}
+
+.draw-element-toolbar>.draw-element-toolbar_a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px
+}
+
+.draw-element-toolbar>.draw-element-toolbar_a>button.draw-element-toolbar_a-size {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.draw-element-toolbar>.draw-element-toolbar_a>button.draw-element-toolbar_a-size>span {
+    background-color: #222;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.draw-element-toolbar>.draw-element-toolbar_a>button.draw-element-toolbar_a-size.active {
+    border: 1px solid #ddd;
+}
+
+.draw-element-toolbar>.draw-element-toolbar_a>button.draw-element-toolbar_a-size:hover>span {
+    background-color: aqua;
+}
+
+/* ----------------------------------------------
+    Toolbar B: Color picker
+   ---------------------------------------------- */
+.draw-element-toolbar>.draw-element-toolbar_b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+}
+
+.draw-element-toolbar>.draw-element-toolbar_b>#draw-element-toolbar_b-color {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+}
+
+.draw-element-toolbar>.draw-element-toolbar_b>#draw-element-toolbar_b-color::-webkit-color-swatch-wrapper {
+    padding: 2px;
+    border: none;
+}
+
+.draw-element-toolbar>.draw-element-toolbar_b>#draw-element-toolbar_b-color::-webkit-color-swatch {
+    border: none;
+    border-radius: 2px;
+}
+
+.draw-element-toolbar>.draw-element-toolbar_b>#draw-element-toolbar_b-color:hover {
+    transform: scale(1);
+    border: 1px solid tomato;
+}
+
+.draw-element-toolbar>.draw-element-toolbar_b>#draw-element-toolbar_b-color:active {
+    transform: scale(1);
+}
+
+/* ----------------------------------------------
+    Draw Board
+   ---------------------------------------------- */
+.draw-element-board-wrap {
+    margin-top: -20px;
+    background: repeating-conic-gradient(var(--w2p-page-checkerboard-pattern-light) 0 25%, var(--w2p-page-checkerboard-pattern-dark) 0 50%) 50% / var(--w2p-page-checkerboard-pattern-size) var(--w2p-page-checkerboard-pattern-size);
+}
+
+.draw-element-board-wrap>.draw-element-board {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR4nO2ZsUoDQRBAnyAIElsj2BhrG7/ARkurWApqYkg0jaXp7GzsTSeW2mlrESG99oYgaOEHKCJqcrIwB+MSDQqB2WQfLCR7ezDvZnaLWYhE/ssEMEnArAI3wAfQAa6BRQJiFtgDukACvImM+/0CLBAAO/L1ExHZB8aBDHAm85cEINGVYN1oiUBKVuafCUCiA9SAewm6qWRmrIukEm6UZG7Ok5kCTuX/BcbLqew90zJPlje7vycOe6zRMm6sYHhP1NXx2kumJs8+gWkMURIBJ1KRuTzwLgEfqbVFtbaK0UwUvGdrXmbK6hBw75nOhE9eZSaxnglXLr9RVxLBZSJly+qe0BL9vm4hSgyQKGGFKGFRYrfP2igxSEZOohglBkiUsEIpShihNGwS1T5rt6PEABkKifU/tGHMtmzGgLZ0MR6klR+chGNJ9ZT0cB1xTcWyhONEAj8Gbj2ZYCQyconiAsyp+VQkG4KEY1MCbvCdNDOPIUgg17+JCKXkpMx0L9a0xLy6dGmKTMO7iGnL0Wyagx9Oq1fgHFiWo9k8La98XJlteNfDQXAF3ElmXJlFIqPOF+i4E2KuRqzFAAAAAElFTkSuQmCC") 0 50, auto;
+}
+
+/* ----------------------------------------------
+    Toolbar C: Draw element
+   ---------------------------------------------- */
+.draw-element-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    overflow: hidden;
+}

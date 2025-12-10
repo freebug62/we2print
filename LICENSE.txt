@@ -1,0 +1,40 @@
+Non-Commercial Use License With AI Training Prohibition (Version 1.0)
+
+Copyright (c) 2025
+
+Permission is hereby granted to any individual or organization to use, copy, modify, and distribute this software and its associated files for personal, research, or educational purposes only, subject to the following conditions:
+
+Non-Commercial Restriction
+This software, including any source code, binaries, or derivative works, may not be used, in whole or in part, for any commercial purpose.
+“Commercial purpose” includes, but is not limited to:
+
+Selling the software or derivatives
+
+Using the software in a paid product or service
+
+Using the software to provide paid consulting or development
+
+Using the software internally within a for-profit organization
+
+AI Training and Machine Learning Prohibition
+The software, including all source code, documentation, and any derivative works, may not be used to train, fine-tune, or improve machine learning models, artificial intelligence systems, neural networks, large language models, or any similar automated systems.
+This includes both direct training (e.g., dataset ingestion) and indirect training (e.g., embedding, feature extraction, or model evaluation).
+
+Redistribution Conditions
+Redistribution is permitted only if:
+
+This license and the copyright notice are included in full
+
+The redistributed version remains non-commercial
+
+No AI training rights are granted
+
+Modification and Derivative Works
+Users may create and distribute modified versions of this software only under this same license.
+No modified version may grant additional rights or permissions that violate this license.
+
+No Warranty
+This software is provided on an “AS IS” basis, without warranties or conditions of any kind, either express or implied.
+The author is not liable for any damages arising from use of this software.
+
+By using, copying, or modifying this software, you agree to be bound by all terms stated above.

@@ -1,0 +1,110 @@
+[
+    {
+        "family": "Bungee Shade",
+        "src": "dist/asset/fonts/Bungee_Shade/BungeeShade-Regular.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Doto",
+        "src": "dist/asset/fonts/Doto/Doto-VariableFont_ROND,wght.ttf",
+        "italic": false,
+        "bold": true
+    },
+    {
+        "family": "Fleur De Leah",
+        "src": "dist/asset/fonts/Fleur_De_Leah/FleurDeLeah-Regular.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Foldit",
+        "src": "dist/asset/fonts/Foldit/Foldit-VariableFont_wght.ttf",
+        "italic": false,
+        "bold": true
+    },
+    {
+        "family": "Imperial Script",
+        "src": "dist/asset/fonts/Imperial_Script/ImperialScript-Regular.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Kablammo",
+        "src": "dist/asset/fonts/Kablammo/Kablammo-Regular-VariableFont_MORF.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Kedebideri",
+        "src": "dist/asset/fonts/Kedebideri/Kedebideri-Regular.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Oi",
+        "src": "dist/asset/fonts/Oi/Oi-Regular.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Orbitron",
+        "src": "dist/asset/fonts/Orbitron/Orbitron-VariableFont_wght.ttf",
+        "italic": false,
+        "bold": true
+    },
+    {
+        "family": "Pacifico",
+        "src": "dist/asset/fonts/Pacifico/Pacifico-Regular.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Playwrite US Trad Guides",
+        "src": "dist/asset/fonts/Playwrite_US_Trad_Guides/PlaywriteUSTradGuides-Regular.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Roboto",
+        "src": "dist/asset/fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf",
+        "italic": true,
+        "bold": true
+    },
+    {
+        "family": "Rubik Glitch",
+        "src": "dist/asset/fonts/Rubik_Glitch/RubikGlitch-Regular.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Rubik Glitch Pop",
+        "src": "dist/asset/fonts/Rubik_Glitch_Pop/RubikGlitchPop-Regular.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Rubik Moonrocks",
+        "src": "dist/asset/fonts/Rubik_Moonrocks/RubikMoonrocks-Regular.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Rubik Puddles",
+        "src": "dist/asset/fonts/Rubik_Puddles/RubikPuddles-Regular.ttf",
+        "italic": false,
+        "bold": false
+    },
+    {
+        "family": "Science Gothic",
+        "src": "dist/asset/fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf",
+        "italic": true,
+        "bold": true
+    },
+    {
+        "family": "UnifrakturMaguntia",
+        "src": "dist/asset/fonts/UnifrakturMaguntia/UnifrakturMaguntia-Regular.ttf",
+        "italic": false,
+        "bold": false
+    }
+]

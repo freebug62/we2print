@@ -1,0 +1,66 @@
+.element-image-search {
+    position: relative;
+}
+
+.element-image-search>.element-clear-btn {
+    position: absolute;
+    right: 5px;
+    top: 28px;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color: #999;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.element-image-search>.element-clear-btn:hover {
+    background-color: tomato;
+}
+
+.element-image-search .ui-text-input {
+    padding-right: 33px;
+}
+
+.element-image-list {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    overflow: auto;
+    align-items: stretch;
+    margin-bottom: 0 !important;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.element-image-list>.element-image-list-item {
+    width: calc(100% / 3 - 4px);
+    border: 1px solid #f7f7f7;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.element-image-list>.element-image-list-item:hover {
+    box-shadow: 0 0 0 2px tomato inset;
+}
+
+.element-image-list>.element-image-list-item>img {
+    display: block;
+    width: 100%;
+    pointer-events: none;
+}

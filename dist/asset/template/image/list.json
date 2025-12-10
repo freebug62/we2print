@@ -1,0 +1,122 @@
+[
+    {
+        "src": "dist/asset/template/image/sample-1.png",
+        "width": 404,
+        "height": 200,
+        "description": "Google logo."
+    },
+    {
+        "src": "dist/asset/template/image/sample-2.png",
+        "width": 500,
+        "height": 444,
+        "description": "Creative wave."
+    },
+    {
+        "src": "dist/asset/template/image/sample-3.png",
+        "width": 5000,
+        "height": 5000,
+        "description": "Start spotlight."
+    },
+    {
+        "src": "dist/asset/template/image/sample-4.png",
+        "width": 400,
+        "height": 300,
+        "description": "Signature Woz."
+    },
+    {
+        "src": "dist/asset/template/image/sample-5.png",
+        "width": 128,
+        "height": 128,
+        "description": "Corner Christmas hat."
+    },
+    {
+        "src": "dist/asset/template/image/sample-6.png",
+        "width": 500,
+        "height": 500,
+        "description": "Book icon."
+    },
+    {
+        "src": "dist/asset/template/image/sample-7.gif",
+        "width": 370,
+        "height": 240,
+        "description": "Fun window icon."
+    },
+    {
+        "src": "dist/asset/template/image/sample-8.gif",
+        "width": 370,
+        "height": 240,
+        "description": "Fun image icon."
+    },
+    {
+        "src": "dist/asset/template/image/sample-9.png",
+        "width": 500,
+        "height": 500,
+        "description": "Invitation card icon."
+    },
+    {
+        "src": "dist/asset/template/image/sample-10.png",
+        "width": 500,
+        "height": 500,
+        "description": "Business card icon."
+    },
+    {
+        "src": "dist/asset/template/image/sample-11.png",
+        "width": 500,
+        "height": 500,
+        "description": "Standup icon."
+    },
+    {
+        "src": "dist/asset/template/image/sample-12.png",
+        "width": 640,
+        "height": 563,
+        "description": "Taniguchi's icon."
+    },
+    {
+        "src": "dist/asset/template/image/sample-13.png",
+        "width": 500,
+        "height": 500,
+        "description": "Flyer icon."
+    },
+    {
+        "src": "dist/asset/template/image/sample-14.png",
+        "width": 500,
+        "height": 500,
+        "description": "Mesh icon."
+    },
+    {
+        "src": "dist/asset/template/image/sample-15.png",
+        "width": 500,
+        "height": 500,
+        "description": "Table calendar icon."
+    },
+    {
+        "src": "dist/asset/template/image/sample-16.png",
+        "width": 500,
+        "height": 500,
+        "description": "Brochure icon."
+    },
+    {
+        "src": "dist/asset/template/image/sample-17.png",
+        "width": 391,
+        "height": 397,
+        "description": "Renault pixel art."
+    },
+    {
+        "src": "dist/asset/template/image/sample-18.png",
+        "width": 208,
+        "height": 295,
+        "description": "Marketing post pixel art."
+    },
+    {
+        "src": "dist/asset/template/image/sample-19.png",
+        "width": 192,
+        "height": 246,
+        "description": "Ink bucket."
+    },
+    {
+        "src": "dist/asset/template/image/sample-20.png",
+        "width": 422,
+        "height": 300,
+        "description": "Riding cloud pixel art."
+    }
+]
